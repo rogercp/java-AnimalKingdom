@@ -51,8 +51,21 @@ public class Main
         animals.sort((a1,a2)->a1.getName().compareTo(a2.getName()));
         System.out.println(animals.toString());
 
+        System.out.println("List all the animals order by how they move");
+        animals.sort((a1,a2)->a1.move().compareTo(a2.move()));
+        System.out.println(animals.toString());
 
+        System.out.println("List only those animals that breath with lungs");
+        printAnimals(animals, animal->animal.breathe()=="lungs");
 
+        System.out.println("List only those animals that breath with lungs and were named in 1758");
+        printAnimals(animals, animal->animal.breathe()=="lungs" && animal.getYearDiscovered()==1758);
+
+        System.out.println("List only those animals that lay eggs and breath with lungs");
+        printAnimals(animals, animal->animal.reproduce()=="eggs" && animal.breathe()=="lungs");
+
+        System.out.println("List alphabetically only those animals that were named in 1758");
+        animals.sort((a1,a2)->a1.getName().compareTo(a2.getName()));
+        printAnimals(animals, animal-> animal.getYearDiscovered()==1758);
     }     
-
 }
