@@ -67,5 +67,12 @@ public class Main
         System.out.println("List alphabetically only those animals that were named in 1758");
         animals.sort((a1,a2)->a1.getName().compareTo(a2.getName()));
         printAnimals(animals, animal-> animal.getYearDiscovered()==1758);
+
+        //stretch
+        System.out.println("For the list of animals, list alphabetically those animals that are mammals");
+        animals.sort((a1,a2)->a1.getName().compareTo(a2.getName()));
+        printAnimals(animals, animal->animal.move()=="walks"&& animal.reproduce()=="live births"&& animal.breathe()=="lungs");
+
+
     }     
 }
