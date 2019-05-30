@@ -38,7 +38,7 @@ public abstract class AbstractAnimals
     @Override
     public String toString()
     {
-        return "Animal: "+name+"\n"+"yearDiscovered: "+"\n";
+        return "Animal: "+name +"\n"+ "yearDiscovered: "+yearDiscovered+"\n";
     }
 
 } 
