@@ -17,12 +17,12 @@ public abstract class AbstractAnimal
         this.yearDiscovered=yearDiscovered;
     }
 
-    public void String move()
+    public void String move();
 
 
-    public void String breath()
+    public void String breath();
     
-    public void String reproduce()
+    public void String reproduce();
 
 
     public int getYearDiscovered()
