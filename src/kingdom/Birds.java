@@ -1,6 +1,6 @@
 package kingdom;
 
-public class Birds extends AbstractAnimal
+public class Birds extends AbstractAnimals
 {
     public Birds(String name, int yearDiscovered)
     {

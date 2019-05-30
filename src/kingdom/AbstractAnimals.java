@@ -2,14 +2,14 @@ package kingdom;
 
 
 
-public abstract class AbstractAnimal
+public abstract class AbstractAnimals
 {
     private static int maxId=0;
     protected int id;
     protected String name;
     protected int yearDiscovered;
     
-    public Animal (String name, int yearDiscovered)
+    public AbstractAnimals (String name, int yearDiscovered)
     {
         maxId++;
         this.id=maxId;
@@ -17,12 +17,12 @@ public abstract class AbstractAnimal
         this.yearDiscovered=yearDiscovered;
     }
 
-    public void String move();
+    public abstract String move();
 
 
-    public void String breath();
+    public abstract String breathe();
     
-    public void String reproduce();
+    public abstract String reproduce();
 
 
     public int getYearDiscovered()
@@ -30,10 +30,15 @@ public abstract class AbstractAnimal
         return yearDiscovered;
     }
 
-    public int getName()
+    public String getName()
     {
         return name;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Animal: "+name+"\n"+"yearDiscovered: "+"\n";
+    }
 
 } 
